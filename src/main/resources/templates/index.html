@@ -10,5 +10,23 @@
 <body>
 <h1>Pick a planet:</h1>
 
+
+<table class="table table-striped">
+    <thead>
+    <tr>
+        <th>Planet Name</th>
+        <th>Number of earth days per year</th>
+        <th>Image</th>
+    </tr>
+    </thead>
+    <tr th:each="planet : ${Planets}">
+        <td th:text="${planet.name}"></td>
+        <td th:text="${planet.yearLength}"></td>
+        <td><img th:src="${planet.imageLink}" height="200" width="300"></td>
+
+    </tr>
+</table>
+
+
 </body>
 </html>
